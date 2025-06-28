@@ -22,7 +22,7 @@ function toggleMenu() {
     
 // Galeria de imagens e vídeos
 const galeriaItens = [
-    { type: 'image', src: 'portfólio/img/proj/1.jpg' },
+    { type: 'image', src: 'portfolio/img/proj/1.jpg' },
     { type: 'image', src: 'portfolio/img/proj/2.jpg' },
     { type: 'image', src: 'portfolio/img/proj/10.jpg' },
     { type: 'image', src: 'portfolio/img/proj/9.png' },
