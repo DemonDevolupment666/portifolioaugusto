@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Augusto Rossi</title>
+  <link rel="stylesheet" href="index.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+</head>
+<body>
+
+     <!-- Backdrop (camada escura) -->
+  <div class="logo-backdrop" id  ="backdrop" onclick="toggleMenu()"></div>
+  
+    <!-- Botão flutuante COM LOGO -->
+    <button class="logo-float" onclick="toggleMenu()">
+      <img class="tamlogo" src="img/logo.png" alt="Logo">
+    </button>
+     <!-- Botão flutuante com logo -->
+  
+ 
+
+  <!-- Menu flutuante -->
+  <div class="logo-menu" id="logoMenu">
+    <a href="https://wa.me/244942615308" target="_blank"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+    <a href="mailto:canelea8@email.com"><i class="fas fa-envelope"></i> Email</a>
+    <a href="+244942615308"><i class="fas fa-comment-dots"></i> Enviar Mensagem</a>
+  </div>
+  
+  <header>
+    
+    <h1>Augusto Rossi</h1>
+    <p>Designer Gráfico | Ilustrador | Programador | Editor de Vídeo</p>
+    <div class="slider">
+    <div class="slides">
+      <img src="img/FB_IMG_1713614603501.jpg" alt="Imagem" />
+      <img src="img/FB_IMG_1713614718607.jpg" alt="Imagem" />
+      <img src="img/IMG-20240503-WA0016.jpg" alt="Imagem" />
+    </div>
+  </header>
+
+  
+  </div>
+
+  <section>
+    <h2>Sobre Mim</h2>
+    <p>Sou um criador visual apaixonado por transformar ideias em imagens. Com experiência em <b>Photoshop, programação web</b> e em processo de evolução na <b>edição de vídeos</b>, ofereço soluções criativas e personalizadas para o seu projeto, dou vida para sua imaginação e para seus <b>sonhos</b>.</p>
+  </section>
+
+  <section>
+    <h2>Serviços</h2>
+    <div class="services">
+        <div class="card" onclick="abrirModal('modalServicos')">Design de Posts para Redes Sociais</div>
+        <div class="card" onclick="abrirModal('modalServicos')">Criação de Logotipos</div>
+        <div class="card" onclick="abrirModal('modalServicos')">Sites Profissionais com HTML e CSS</div>
+        <div class="card" onclick="abrirModal('modalServicos')">Edição Básica de Vídeos (Em breve)</div>
+      </div>      
+  </section>
+
+  <section>
+    <h2>Projetos</h2>
+    <div class="projects">
+        <div class="card" onclick="abrirResumoProjeto('Criação de Logotipo para o grupo de tecnologia voltado à inovação e soluções tecnológicas para a juventude.')">
+          <img class="tamanho" src="img/proj/9.png" alt=""></div>
+        <div class="card" onclick="abrirResumoProjeto('Criação de logotipo para loja online de roupas modernas.')">
+          <img class="tamanho" src="img/Captura de Ecrã (48).png" alt=""></div>
+        <div class="card" onclick="abrirResumoProjeto('Criação de posts para Redes Sociais.')">
+          <img class="tamanho" src="img/proj/12.PNG" alt="">
+        </div>
+      </div>      
+  </section>
+
+  <section>
+    <h2>Galeria</h2>
+    <div class="gallery" id="gallery">
+      <!-- Itens serão inseridos aqui via JS -->
+    </div>
+    <button id="verMaisBtn" onclick="mostrarMais()" class="ver-mais">Ver mais</button>
+  </section>
+  
+  <!-- Modal -->
+  <div id="galeriaModal" class="modal" onclick="fecharGaleriaModal()">
+    <div class="modal-content" onclick="event.stopPropagation()">
+      <span class="close" onclick="fecharGaleriaModal()">&times;</span>
+      <div id="conteudoModal"></div>
+    </div>
+  </div>
+  
+
+  <section>
+    <h2>Contato</h2>
+    <p>Entre em contato pelo WhatsApp: <strong>+244 942615308</strong><br />
+    Ou envie um email para: <strong>Canelea8@email.com</strong></p>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Augusto Rossi. Todos os direitos reservados.</p>
+  </footer>
+
+  <!-- Modal de Serviços -->
+<div id="modalServicos" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="fecharModal('modalServicos')">&times;</span>
+      <h3>Pacotes Disponíveis</h3>
+      <ul>
+        <li><strong>Pacote Básico:</strong> 3 artes mensais</li>
+        <li><strong>Pacote Intermediário:</strong> 5 artes + 1 logo</li>
+        <li><strong>Pacote Premium:</strong> 10 artes + identidade visual</li>
+      </ul>
+    </div>
+  </div>
+  
+  <!-- Modal de Projetos -->
+  <div id="modalProjeto" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="fecharModal('modalProjeto')">&times;</span>
+      <h3>Resumo do Projeto</h3>
+      <p id="resumoProjeto">Detalhes sobre o projeto selecionado aparecerão aqui.</p>
+    </div>
+  </div>
+  
+  <script src="index.js"></script>
+</body>
+</html>
